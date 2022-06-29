@@ -28,7 +28,8 @@ from plugins.helpers import parser,split_quotes
 
 @Client.on_message(filters.command(Config.ADD_FILTER_CMD))
 async def addfilter(client, message):
-      
+    
+    userid = message.from_user.id
     chat_type = message.chat.type
     args = message.text.html.split(None, 1)
 
